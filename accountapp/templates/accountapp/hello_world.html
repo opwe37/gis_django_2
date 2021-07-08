@@ -2,23 +2,16 @@
 
 {% block content %}
 
-    <style>
-        .testing {
-            background-color: cornflowerblue;
-            margin: 1rem;
-            width: 55px;
-            height: 55px;
-            border-radius: .5rem;
-            display: inline-block;
-        }
-    </style>
+    <div style="margin: 2rem; text-align: center">
+        <h1>METHOD</h1>
 
-    <div style="height: 20rem; font-size: 2rem">
-        <h1> Django Test </h1>
-        <div class="testing" style="height: 48px; width: 48px">block</div>
-        <div class="testing" style="height: 3em; width: 3em">block</div>
-        <div class="testing" style="height: 3rem; width: 3rem">block</div>
-        <div class="testing" style="height: 30%; width: 30%">block</div>
+        <form action="/accounts/hello_world/" method="post">
+            {% csrf_token %}
+            <input name="hello_world_input" type="text" />
+            <button>제출</button>
+        </form>
+
+        <h3>{{ hello_world_output.text }}</h3>
     </div>
 
 {% endblock %}
