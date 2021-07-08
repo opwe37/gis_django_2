@@ -2,8 +2,23 @@
 
 {% block content %}
 
-    <div>
+    <style>
+        .testing {
+            background-color: cornflowerblue;
+            margin: 1rem;
+            width: 55px;
+            height: 55px;
+            border-radius: .5rem;
+            display: inline-block;
+        }
+    </style>
+
+    <div style="height: 20rem; font-size: 2rem">
         <h1> Django Test </h1>
+        <div class="testing" style="height: 48px; width: 48px">block</div>
+        <div class="testing" style="height: 3em; width: 3em">block</div>
+        <div class="testing" style="height: 3rem; width: 3rem">block</div>
+        <div class="testing" style="height: 30%; width: 30%">block</div>
     </div>
 
 {% endblock %}
