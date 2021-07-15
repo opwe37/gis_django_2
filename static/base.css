@@ -27,15 +27,16 @@ a {
     margin: 1rem 1.5rem;
 }
 
-a, li {
-    all: unset;
-}
-
 a {
+    all: unset;
     color: black;
 }
 
 a:hover {
     color: black;
     cursor: pointer;
+}
+
+ul {
+    text-align: left;
 }
