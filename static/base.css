@@ -1,7 +1,3 @@
-a {
-    text-decoration: none !important;
-}
-
 .logo {
     font-family: 'Yellowtail', cursive;
 }
@@ -39,4 +35,8 @@ a:hover {
 
 ul {
     text-align: left;
+}
+
+input[type='password'] {
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
 }
