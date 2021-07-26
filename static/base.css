@@ -40,3 +40,14 @@ ul {
 input[type='password'] {
     font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
 }
+
+.profile_img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 20rem;
+    object-fit: cover;
+}
+
+.NNS_B {
+    font-family: 'NanumSquareB';
+}
