@@ -40,8 +40,8 @@ class AccountCreateView(CreateView):
 has_ownership = [login_required, account_ownership_required]
 
 
-# @method_decorator(has_ownership, 'get')
-# @method_decorator(has_ownership, 'post')
+@method_decorator(has_ownership, 'get')
+@method_decorator(has_ownership, 'post')
 class AccountUpdateView(UpdateView):
     model = User
     form_class = AccountUpdateForm
