@@ -51,3 +51,15 @@ input[type='password'] {
 .NNS_B {
     font-family: 'NanumSquareB';
 }
+
+.round-button {
+    color: black;
+    text-decoration: none;
+    padding: 0.2rem;
+    border-radius: 20rem;
+    box-shadow: 0 0 3px black;
+}
+
+.round-button:hover {
+    color: dimgray;
+}
