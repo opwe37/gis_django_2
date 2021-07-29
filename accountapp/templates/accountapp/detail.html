@@ -22,14 +22,11 @@
                 </h2>
             {% endif %}
         </div>
-        <dvi>
-            {{ target_user.date_joined }}
-        </dvi>
 
         {% if user == target_user %}
         <div>
-            <a href="{% url 'accountapp:update' pk=user.id %}">Update Info</a>
-            <a style="margin-left:1rem" href="{% url 'accountapp:delete' pk=user.id %}">Quit</a>
+            <a href="{% url 'accountapp:update' pk=user.id %}" class="material-icons round-button">settings</a>
+            <a href="{% url 'accountapp:delete' pk=user.id %}" class="material-icons round-button">close</a>
         </div>
         {% endif %}
     </div>
