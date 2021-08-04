@@ -3,7 +3,7 @@
 
 {% block content %}
 
-  <div class="container">
+  <div class="container text-center">
     <div><img src="{{ target_article.image.url }}" alt=""></div>
     <div>
       <div>
@@ -14,7 +14,10 @@
       <div>
         {{ target_article.content }}
 
-        <div><a href="{% url 'articleapp:update' pk=target_article.pk %}" class="btn btn-success rounded-pill px-4">Update</a></div>
+        <div>
+          <a href="{% url 'articleapp:update' pk=target_article.pk %}" class="btn btn-success rounded-pill px-4">Update</a>
+          <a href="{% url 'articleapp:delete' pk=target_article.pk %}" class="btn btn-danger rounded-pill px-4">Delete</a>
+        </div>
       </div>
     </div>
   </div>
