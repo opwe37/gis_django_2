@@ -6,15 +6,17 @@
     <style>
         .container div {
           width: 280px;
+
           display: flex;
+          flex-direction: column;
           justify-content: center;
           align-items: center;
+
           border-radius: 1rem;
-          flex-direction: column;
           box-shadow: 0 0 1rem darkgray;
         }
 
-        div a, img {
+        .container div a, img {
             width: 100%;
             border-radius: 1rem;
         }
@@ -36,4 +38,5 @@
 
     <script src="{% static 'js/magic-grid.cjs.js' %}"></script>
 
+    {% include 'snippets/pagination.html' %}
 {% endblock %}
