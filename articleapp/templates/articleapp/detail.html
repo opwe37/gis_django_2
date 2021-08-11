@@ -37,6 +37,11 @@
           <div class="my-2">
             <p style="margin: 0">{{ comment.content }}</p>
           </div>
+          {% if comment.writer == user %}
+          <div class="text-end">
+            <a href="{% url 'commentapp:delete' pk=comment.pk %}">Delete</a>
+          </div>
+          {% endif %}
         </div>
       {% endfor %}
 
