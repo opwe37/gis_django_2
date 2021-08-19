@@ -17,7 +17,7 @@ class SubscriptionView(RedirectView):
 
         subscription = Subscription.objects.filter(user=user, project=project)
 
-        if subscription.exits():
+        if subscription.exists():
             subscription.delete()
         else:
             Subscription(user=user, project=project).save()
