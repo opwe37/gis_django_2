@@ -20,6 +20,9 @@
         </span>
         {% else %}
         <span>
+            <a href="{% url 'subscribeapp:list' %}">Subscription</a>
+        </span>
+        <span>
             <a href="{% url 'accountapp:detail' pk=user.id %}">MyPage</a>
         </span>
         <span>
