@@ -10,6 +10,16 @@
         <h1>{{ target_article.title }}</h1>
         <h4>{{ target_article.writer.profile.nickname }}</h4>
         <p>{{ target_article.created_at }}</p>
+        <div>
+          {% if liked %}
+          <a href="{% url 'likeapp:article_like' article_pk=target_article.pk %}" class="material-icons" style="vertical-align: middle; color: #f777">favorite</a>
+          {% else %}
+          <a href="{% url 'likeapp:article_like' article_pk=target_article.pk %}" class="material-icons" style="vertical-align: middle">favorite_border</a>
+          {% endif %}
+          <span style="vertical-align: middle">
+            {{ target_article.like }}
+          </span>
+        </div>
       </div>
       <div class="article-content my-2">
         {{ target_article.content }}
