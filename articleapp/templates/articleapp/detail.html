@@ -21,8 +21,9 @@
           </span>
         </div>
       </div>
+
       <div class="article-content my-2">
-        {{ target_article.content }}
+        {{ target_article.content | safe }}
       </div>
 
       {% if user == target_article.writer %}
