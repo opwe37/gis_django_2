@@ -93,3 +93,7 @@ a + a {
         font-size: 13px;
     }
 }
+
+span + span {
+    margin-left: .5rem;
+}
