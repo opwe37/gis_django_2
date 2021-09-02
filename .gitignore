@@ -84,3 +84,7 @@ __pycache__/
 media/
 
 staticfiles/
+
+gis_gallery_gcp
+gis_gallery_gcp.pub
+gis_gallery_gcp_ppk.ppk
