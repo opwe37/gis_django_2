@@ -2,7 +2,7 @@ from .base import *
 
 
 def read_secrets(secret_name):
-    with open('/run/secret/' + secret_name) as f:
+    with open('/run/secrets/' + secret_name) as f:
         secret = f.readline().strip()
     return secret
 
