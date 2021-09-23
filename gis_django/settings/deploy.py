@@ -1,21 +1,14 @@
 from .base import *
 
-env_list = dict()
 
-local_env = open(os.path.join(BASE_DIR, '.env'))
+def read_secrets(secret_name):
+    with open('/run/secret/' + secret_name) as f:
+        secret = f.readline().strip()
+    return secret
 
-while True:
-    line = local_env.readline()
-    if not line:
-        break
-    line.replace('\n', '')
-    start = line.find('=')
-    key = line[:start]
-    value = line[start+1:]
-    env_list[key] = value
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env_list['SECRET_KEY']
+SECRET_KEY = read_secrets('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -29,8 +22,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django',
-        'USER': 'django',
-        'PASSWORD': 'admin',
+        'USER': read_secrets('MARIADB_USER'),
+        'PASSWORD': read_secrets('MARIADB_PASSWORD'),
         'HOST': 'mariadb',
         'PORT': '3306',
     }
